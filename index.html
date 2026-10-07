@@ -4,77 +4,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Quadro de Tarefas</title>
-
+    <title>Zombie Survival - Central de Missões</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <header>
-        <h1>Quadro de Tarefas</h1>
-        <p>Organize as tarefas da equipe</p>
+        <h1>🧟 ZOMBIE SURVIVAL</h1>
+        <p>Central de Missões dos Sobreviventes</p>
     </header>
 
     <main>
         <section>
-            <h2>Resumo</h2>
+            <h2>📊 Central de Sobrevivência</h2>
             <div class="resumo">
-                <div>
-                    <strong id="total">0</strong>
-                    <span>Total</span>
+                <div class="caixa">
+                    <h3>🧟 Total</h3>
+                    <p id="total">0</p>
                 </div>
 
-                <div>
-                    <strong id="pendente">0</strong>
-                    <span>Pendente</span>
+                <div class="caixa">
+                    <h3>🔎 Pendentes</h3>
+                    <p id="aFazer">0</p>
                 </div>
 
-                <div>
-                    <strong id="fazendo">0</strong>
-                    <span>Fazendo</span>
+                <div class="caixa">
+                    <h3>🔦 Em andamento</h3>
+                    <p id="fazendo">0</p>
                 </div>
 
-                <div>
-                    <strong id="feito">0</strong>
-                    <span>Feito</span>
+                <div class="caixa">
+                    <h3>✅ Concluídas</h3>
+                    <p id="feito">0</p>
+                </div>
+
+                <div class="caixa">
+                    <h3>💀 Fracassadas</h3>
+                    <p id="fracasso">0</p>
                 </div>
             </div>
         </section>
 
         <section>
-            <h2>Nova tarefa</h2>
+            <h2>📜 Nova Missão</h2>
+
             <form id="formulario">
-                <label for="titulo">Título</label>
-                <input
-                    type="text"
-                    id="titulo"
-                    placeholder="Ex: Fazer trabalho"
-                >
 
-                <label for="descricao">Descrição</label>
+                <label for="titulo">Nome da missão:</label>
+                <input type="text" id="titulo" placeholder="Ex: Buscar suprimentos">
 
-                <textarea
-                    id="descricao"
-                    placeholder="Descreva a tarefa"
-                ></textarea>
+                <label for="descricao">Objetivo:</label>
+                <textarea id="descricao"
+                    placeholder="Descreva o objetivo da missão"></textarea>
 
-                <label for="categoria">Categoria</label>
-
+                <label for="categoria">Tipo de missão:</label>
                 <select id="categoria">
                     <option value="">Selecione</option>
-                    <option value="Estudo">Estudo</option>
-                    <option value="Projeto">Projeto</option>
-                    <option value="Reunião">Reunião</option>
-
+                    <option value="Suprimentos">Suprimentos</option>
+                    <option value="Resgate">Resgate</option>
+                    <option value="Exploração">Exploração</option>
+                    <option value="Defesa">Defesa</option>
                 </select>
 
+                <label for="local">Local:</label>
+                <select id="local">
+                    <option value="">Selecione</option>
+                    <option value="Supermercado">Supermercado</option>
+                    <option value="Hospital">Hospital</option>
+                    <option value="Floresta">Floresta</option>
+                    <option value="Abrigo">Abrigo</option>
+                    <option value="Posto de gasolina">Posto de gasolina</option>
+                </select>
 
-                <label for="prioridade">
-                    Prioridade
-                </label>
-
+                <label for="prioridade">Prioridade:</label>
                 <select id="prioridade">
                     <option value="">Selecione</option>
                     <option value="Baixa">Baixa</option>
@@ -82,52 +85,60 @@
                     <option value="Alta">Alta</option>
                 </select>
 
-                <label for="responsavel">
-                    Responsável
-                </label>
+                <label for="dificuldade">Zumbis:</label>
+                <select id="dificuldade">
+                    <option value="">Selecione</option>
+                    <option value="Fácil">Poucos</option>
+                    <option value="Média">Médio</option>
+                    <option value="Difícil">Muitos</option>
+                </select>
 
-                <input
-                    type="text"
-                    id="responsavel"
-                    placeholder="Nome do responsável"
-                >
+                <label for="responsavel">Sobrevivente responsável:</label>
+                <input type="text" id="responsavel"
+                    placeholder="Ex: Victor">
 
-                <label for="prazo">Prazo</label>
+                <label for="prazo">Prazo:</label>
+                <input type="date" id="prazo">
 
-                <input
-                    type="date"
-                    id="prazo"
-                >
+                <button type="submit">🧟 Criar missão</button>
 
-                <button type="submit">Adicionar tarefa</button>
                 <p id="mensagem"></p>
+
             </form>
         </section>
 
         <section>
-            <h2>Lista de tarefas</h2>
-            <label for="busca">Buscar</label>
-            <input
-                type="text"
-                id="busca"
-                placeholder="Digite o título da tarefa"
-            >
+            <h2>🗺️ Missões de Sobrevivência</h2>
+            <div class="filtros">
+                <input
+                    type="text"
+                    id="busca"
+                    placeholder="🔎 Procurar missão..."
+                >
 
-            <label for="filtro">Filtrar por status</label>
-
-            <select id="filtro">
-                <option value="Todos">Todos</option>
-                <option value="A fazer">A fazer</option>
-                <option value="Fazendo">Fazendo</option>
-                <option value="Feito">Feito</option>
-            </select>
-
+                <select id="filtro">
+                    <option value="Todos">Todos os status</option>
+                    <option value="A fazer">A fazer</option>
+                    <option value="Fazendo">Em andamento</option>
+                    <option value="Feito">Concluída</option>
+                </select>
+            </div>
             <div id="lista"></div>
+        </section>
+
+        <section id="detalhes" class="detalhes">
+            <h2>📖 Detalhes da missão</h2>
+            <div id="conteudoDetalhes">
+                <p>Selecione uma missão para ver seus detalhes.</p>
+            </div>
         </section>
     </main>
 
-    <footer><p>Projeto de Programação Web</p></footer>
+    <footer>
+        <p>🧟 Zombie Survival — Central de Sobrevivência</p>
+    </footer>
+
     <script src="script.js"></script>
-    
+
 </body>
 </html>

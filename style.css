@@ -1,0 +1,203 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0f0f0f;
+    color: #eeeeee;
+}
+
+header {
+    background-color: #111111;
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 4px solid #6d1101;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+    color: #c91f01;
+}
+
+header p {
+    margin-top: 10px;
+    color: #cccccc;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+section {
+    background-color: #111111;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #6d1101;
+}
+
+h2 {
+    margin-top: 0;
+    color: #ffffff;
+}
+
+.resumo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.caixa {
+    background-color: #161616;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #6d1101;
+}
+
+.caixa h3 {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.caixa p {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #c91f01;
+}
+.caixa {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #2c972c;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+textarea,
+select {
+    padding: 10px;
+    border: 1px solid #6d1101;
+    border-radius: 5px;
+    background-color: #161616;
+    color: white;
+    font-size: 15px;
+}
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #999999;
+    color: #161616;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6d1101;
+    color: #c0bfbf;
+}
+
+.filtros {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filtros input {
+    flex: 1;
+}
+
+.tarefa {
+    background-color: #34a72a;
+    border-left: 5px solid #6d1101;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.tarefa h3 {
+    margin-top: 0;
+    color: #9acd32;
+}
+
+.tarefa p {
+    margin: 7px 0;
+}
+
+.tarefa button {
+    width: auto;
+    padding: 8px 12px;
+    margin-right: 8px;
+    margin-top: 10px;
+}
+
+.botao-detalhes {
+    background-color: #6d1101;
+}
+
+.botao-detalhes:hover {
+    background-color: #697569;
+}
+
+.detalhes {
+    border-left: 5px solid #6d1101;
+}
+
+#conteudoDetalhes {
+    background-color: #33180b;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#mensagem {
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #082e00;
+    color: #aaaaaa;
+}
+
+@media (max-width: 700px) {
+    .resumo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .filtros {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 450px) {
+    .resumo {
+        grid-template-columns: 1fr;
+    }
+    header h1 {
+        font-size: 25px;
+    }
+    main {
+        padding: 10px;
+    }
+}
