@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quadro de Tarefas</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Quadro de Tarefas</h1>
+        <p>Organize as tarefas da equipe</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Resumo</h2>
+            <div class="resumo">
+                <div>
+                    <strong id="total">0</strong>
+                    <span>Total</span>
+                </div>
+
+                <div>
+                    <strong id="pendente">0</strong>
+                    <span>Pendente</span>
+                </div>
+
+                <div>
+                    <strong id="fazendo">0</strong>
+                    <span>Fazendo</span>
+                </div>
+
+                <div>
+                    <strong id="feito">0</strong>
+                    <span>Feito</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Nova tarefa</h2>
+            <form id="formulario">
+                <label for="titulo">Título</label>
+                <input
+                    type="text"
+                    id="titulo"
+                    placeholder="Ex: Fazer trabalho"
+                >
+
+                <label for="descricao">Descrição</label>
+
+                <textarea
+                    id="descricao"
+                    placeholder="Descreva a tarefa"
+                ></textarea>
+
+                <label for="categoria">Categoria</label>
+
+                <select id="categoria">
+                    <option value="">Selecione</option>
+                    <option value="Estudo">Estudo</option>
+                    <option value="Projeto">Projeto</option>
+                    <option value="Reunião">Reunião</option>
+
+                </select>
+
+
+                <label for="prioridade">
+                    Prioridade
+                </label>
+
+                <select id="prioridade">
+                    <option value="">Selecione</option>
+                    <option value="Baixa">Baixa</option>
+                    <option value="Média">Média</option>
+                    <option value="Alta">Alta</option>
+                </select>
+
+                <label for="responsavel">
+                    Responsável
+                </label>
+
+                <input
+                    type="text"
+                    id="responsavel"
+                    placeholder="Nome do responsável"
+                >
+
+                <label for="prazo">Prazo</label>
+
+                <input
+                    type="date"
+                    id="prazo"
+                >
+
+                <button type="submit">Adicionar tarefa</button>
+                <p id="mensagem"></p>
+            </form>
+        </section>
+
+        <section>
+            <h2>Lista de tarefas</h2>
+            <label for="busca">Buscar</label>
+            <input
+                type="text"
+                id="busca"
+                placeholder="Digite o título da tarefa"
+            >
+
+            <label for="filtro">Filtrar por status</label>
+
+            <select id="filtro">
+                <option value="Todos">Todos</option>
+                <option value="A fazer">A fazer</option>
+                <option value="Fazendo">Fazendo</option>
+                <option value="Feito">Feito</option>
+            </select>
+
+            <div id="lista"></div>
+        </section>
+    </main>
+
+    <footer><p>Projeto de Programação Web</p></footer>
+    <script src="script.js"></script>
+    
+</body>
+</html>
