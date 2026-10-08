@@ -91,28 +91,8 @@ function mostrarMissoes() {
                 </p>
 
                 <p>
-                    <strong>Objetivo:</strong>
-                    ${missao.descricao}
-                </p>
-
-                <p>
-                    <strong>Tipo:</strong>
-                    ${missao.categoria}
-                </p>
-
-                <p>
-                    <strong>Local:</strong>
-                    ${missao.local}
-                </p>
-
-                <p>
                     <strong>Prioridade:</strong>
                     ${missao.prioridade}
-                </p>
-
-                <p>
-                    <strong>Dificuldade:</strong>
-                    ${missao.dificuldade}
                 </p>
 
                 <p>
@@ -176,11 +156,8 @@ function alterarStatus(id) {
             else {
 
                 missoes[i].status = "Pendente";
-
             }
-
         }
-
     }
 
     mostrarMissoes();
@@ -216,11 +193,9 @@ function atualizarResumo() {
             feito++;
 
         }
-
         else if (missoes[i].status === "Fracasso") {
 
             fracasso++;
-
         }
 
     }
