@@ -24,7 +24,7 @@ let missoes = [
         dificuldade: "Difícil",
         responsavel: "Ana",
         prazo: "2026-10-11",
-        status: "A fazer"
+        status: "Pendente"
     },
 
     {
