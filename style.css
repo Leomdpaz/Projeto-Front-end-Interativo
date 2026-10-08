@@ -60,7 +60,7 @@ h2 {
     margin: 5px 0;
     font-size: 16px;
 }
-#teste
+
 .caixa p {
     font-size: 30px;
     font-weight: bold;
@@ -123,8 +123,8 @@ button:hover {
 }
 
 .tarefa {
-    background-color: #34a72a;
-    border-left: 5px solid #6d1101;
+    background-color: #0050241e;
+    border-left: 5px solid #016d0a;
     padding: 15px;
     margin-bottom: 15px;
     border-radius: 5px;
@@ -132,7 +132,7 @@ button:hover {
 
 .tarefa h3 {
     margin-top: 0;
-    color: #9acd32;
+    color: #b6b6b6;
 }
 
 .tarefa p {
@@ -147,11 +147,11 @@ button:hover {
 }
 
 .botao-detalhes {
-    background-color: #6d1101;
+    background-color: #016d0a;
 }
 
 .botao-detalhes:hover {
-    background-color: #697569;
+    background-color: #003605;
 }
 
 .detalhes {
