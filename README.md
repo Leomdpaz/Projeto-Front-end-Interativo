@@ -11,7 +11,7 @@ O sistema funciona como uma central de comando para um grupo de sobreviventes, p
 * **Projeto:** Zombie Survival - Central de Missões dos Sobreviventes
 * **Disciplina:** Laboratório de desenvolvimento web
 * **Unidade:** 1
-* **Tema escolhido:** Tema 5 — Quadro de tarefas da equipe
+* **Tema escolhido:** Tema 5 - Quadro de tarefas da equipe
 * **Integrante(s):** Leonardo Maciel da Paz
 * **Turma:** Ciência da Computação - 6º Perídodo
 
