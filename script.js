@@ -280,7 +280,7 @@ document
             dificuldade: dificuldade,
             responsavel: responsavel,
             prazo: prazo,
-            status: "A fazer"
+            status: "Pendente"
 
         };
 
