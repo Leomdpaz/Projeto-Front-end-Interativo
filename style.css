@@ -270,3 +270,16 @@ footer {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
 }
+
+
+.mensagem-carregamento {
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #1b241b;
+    color: #1326d4;
+    border: 1px solid #526b3a;
+    border-radius: 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}

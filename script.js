@@ -45,15 +45,25 @@ function carregarMissoes() {
     return new Promise(function(resolve) {
         setTimeout(function() {
             resolve(missoes);
-        }, 1000);
+        }, 5000);
     });
-
 }
 
 async function iniciar() {
+    const mensagem = document.getElementById("mensagem-carregamento");
+
     console.log("Carregando missões...");
+
+    mensagem.textContent = "☣️ Carregando missões... Aguarde.";
+    mensagem.style.color = "#ffcc00cb";
+
     await carregarMissoes();
+
     console.log("Missões carregadas!");
+
+    mensagem.textContent = "✅ Missões carregadas.";
+    mensagem.style.color = "#a7ff60b9";
+
     mostrarMissoes();
     atualizarResumo();
 }
